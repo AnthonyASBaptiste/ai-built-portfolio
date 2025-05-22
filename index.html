@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Software Engineer | Full-Stack Developer Portfolio</title>
+    <meta name="description" content="Portfolio of a Senior Software Engineer with over a decade of experience in designing, developing, and deploying scalable software solutions across various domains.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Senior Software Engineer Portfolio</h1>
+        <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+            <span class="hamburger-icon"></span>
+        </button>
+        <nav id="main-nav" role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about-me" tabindex="0">About Me</a></li>
+                <li><a href="#projects" tabindex="0">Projects</a></li>
+                <li><a href="#skills" tabindex="0">Skills</a></li>
+                <li><a href="#contact" tabindex="0">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section id="about-me" role="region" aria-labelledby="about-me-heading">
+            <h2 id="about-me-heading">About Me</h2>
+            <p>
+                Hello! I'm a Senior Software Engineer hailing from the vibrant twin islands of Trinidad and Tobago.
+                With over a decade of experience in the tech industry, I've honed my skills in designing, developing,
+                and deploying scalable and efficient software solutions. I'm passionate about leveraging technology
+                to solve complex problems and mentoring junior developers. My journey has taken me through various
+                domains, from enterprise applications to innovative startups, always with a focus on clean code,
+                robust architecture, and user-centric design. When I'm not coding, I enjoy exploring the latest
+                advancements in AI and contributing to open-source projects.
+            </p>
+        </section>
+
+        <section id="projects" role="region" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <div class="project-filters" role="group" aria-label="Project filters">
+                <button class="filter-btn active" data-category="all" aria-pressed="true">All Projects</button>
+                <button class="filter-btn" data-category="web" aria-pressed="false">Web Applications</button>
+                <button class="filter-btn" data-category="mobile" aria-pressed="false">Mobile Applications</button>
+                <button class="filter-btn" data-category="opensource" aria-pressed="false">Open Source</button>
+            </div>
+            <div class="projects-container">
+                <article class="project-card" data-category="web">
+                    <figure>
+                        <img src="src/images/dashboard/project1-image.jpg" alt="Screenshot of Project Alpha showing a web application dashboard with analytics and user management interface" class="project-image">
+                        <figcaption>
+                            <h3>Project Alpha</h3>
+                            <p>A cutting-edge web application developed to streamline a complex business process. Leveraged modern JavaScript frameworks and a microservices architecture. Focused on performance and scalability.</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="project-card" data-category="mobile">
+                    <figure>
+                        <img src="src/images/dashboard/project2-image.jpg" alt="Screenshot of Project Beta mobile app showing the main user interface with product browsing features" class="project-image">
+                        <figcaption>
+                            <h3>Project Beta</h3>
+                            <p>An innovative mobile application designed to enhance user engagement for a leading e-commerce platform. Implemented with a focus on native performance and intuitive user experience.</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="project-card" data-category="opensource">
+                    <figure>
+                        <img src="src/images/dashboard/project3-image.jpg" alt="Code snippet showing contributions to the Gamma Library open source project with performance improvements" class="project-image">
+                        <figcaption>
+                            <h3>Open Source Contribution: Gamma Library</h3>
+                            <p>Contributed significantly to a popular open-source library, focusing on improving its core functionalities and documentation. My contributions helped increase performance by X%.</p>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" role="region" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+            <ul>
+                <li>Programming Languages: JavaScript (Node.js, React, Vue, Angular), Python, Java, C#, Go</li>
+                <li>Databases: SQL (PostgreSQL, MySQL), NoSQL (MongoDB, Cassandra, Redis)</li>
+                <li>Cloud Platforms: AWS, Azure, Google Cloud Platform</li>
+                <li>DevOps & CI/CD: Docker, Kubernetes, Jenkins, GitLab CI, Terraform</li>
+                <li>Architecture: Microservices, Domain-Driven Design, Event-Driven Architecture</li>
+                <li>Agile Methodologies: Scrum, Kanban</li>
+                <li>Software Design Principles: SOLID, DRY, KISS</li>
+                <li>Version Control: Git, GitHub, GitLab</li>
+                <li>Testing: Unit Testing, Integration Testing, E2E Testing</li>
+                <li>Problem Solving & Algorithm Design</li>
+                <li>Team Leadership & Mentoring</li>
+            </ul>
+        </section>
+
+        <section id="contact" role="region" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Me</h2>
+            <div id="form-feedback" class="form-feedback" role="alert" aria-live="assertive"></div>
+            <form id="contact-form" action="#" method="post" role="form" aria-label="Contact Form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" required aria-required="true">
+                    <div id="name-error" class="error-message" aria-live="polite"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="user_email" required aria-required="true">
+                    <div id="email-error" class="error-message" aria-live="polite"></div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="user_subject" aria-required="false">
+                    <div id="subject-error" class="error-message" aria-live="polite"></div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="user_message" rows="5" required aria-required="true"></textarea>
+                    <div id="message-error" class="error-message" aria-live="polite"></div>
+                </div>
+                <div>
+                    <button type="submit" tabindex="0">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2024 Senior Software Engineer Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- 
+    Note on color contrast for accessibility:
+    When implementing the CSS styles, ensure that:
+    1. Text color contrasts well with background colors (minimum ratio of 4.5:1 for normal text, 3:1 for large text)
+    2. Use the WebAIM Contrast Checker (https://webaim.org/resources/contrastchecker/) to verify contrast ratios
+    3. Avoid using color alone to convey information
+    4. Consider providing a high-contrast mode option
+    -->
+
+    <!-- Lightbox Modal for Project Images -->
+    <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-title">
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <h3 id="lightbox-title" class="lightbox-title"></h3>
+            <img id="lightbox-image" class="lightbox-image" src="" alt="">
+            <div class="lightbox-navigation">
+                <button id="lightbox-prev" class="lightbox-nav-btn" aria-label="Previous image">&lsaquo;</button>
+                <button id="lightbox-next" class="lightbox-nav-btn" aria-label="Next image">&rsaquo;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for responsive navigation and interactive elements -->
+    <script src="script.js"></script>
+</body>
+</html>
